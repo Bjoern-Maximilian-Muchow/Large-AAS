@@ -1,7 +1,7 @@
 <header class="site-header">
   <div class="container nav-wrap">
     <a class="brand" href="#top" aria-label="Homepage">
-      <span class="brand-mark">L</span>
+      <img class="brand-mark" src="/lattis-logo.png" alt="Lattis logo" />
       <span class="brand-text">
         <strong>Lattis</strong>
         <small>Seating Solutions</small>
@@ -49,20 +49,20 @@
   }
 
   .brand-mark {
-    width: 2.75rem;
-    height: 2.75rem;
-    display: inline-grid;
-    place-items: center;
-    background: linear-gradient(135deg, var(--text), var(--accent));
-    color: #f6f4f4;
-    border-radius: 50%;
-    font-weight: 700;
-    box-shadow: 0 14px 26px rgba(77, 45, 70, 0.15);
+    display: block;
+    width: auto;
+    height: 3.15rem;
+    object-fit: contain;
+    filter: drop-shadow(0 12px 22px rgba(77, 45, 70, 0.12));
   }
 
   .brand-text {
     display: grid;
     line-height: 1.15;
+  }
+
+  .brand-text strong {
+    font-size: 1.15rem;
   }
 
   .brand-text small {
@@ -132,6 +132,10 @@
   }
 
   @media (max-width: 720px) {
+    .brand-mark {
+      height: 2.8rem;
+    }
+
     .menu-toggle {
       display: inline-block;
     }
