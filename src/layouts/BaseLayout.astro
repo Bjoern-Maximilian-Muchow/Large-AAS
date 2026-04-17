@@ -1,7 +1,7 @@
 ---
 const {
-  title = "Fictional Company",
-  description = "Responsive Astro starter website for a fictional company."
+  title = "Lattis | Seating Solutions",
+  description = "Lattis creates modern luxury seating solutions with elegant, tailored comfort."
 } = Astro.props;
 ---
 
@@ -15,7 +15,7 @@ const {
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -26,14 +26,17 @@ const {
 
 <style is:global>
   :root {
-    --bg: #f3efe6;
-    --surface: rgba(255, 255, 255, 0.72);
-    --surface-strong: #fffdf8;
-    --text: #15231f;
-    --muted: #5a6a64;
-    --line: rgba(21, 35, 31, 0.1);
-    --accent: #0f766e;
-    --shadow: 0 24px 60px rgba(21, 35, 31, 0.08);
+    --bg: #f6f4f4;
+    --surface: rgba(255, 255, 255, 0.58);
+    --surface-strong: rgba(255, 255, 255, 0.82);
+    --text: #4d2d46;
+    --muted: rgba(77, 45, 70, 0.72);
+    --line: rgba(77, 45, 70, 0.14);
+    --accent: #986281;
+    --accent-soft: rgba(152, 98, 129, 0.12);
+    --shadow: 0 28px 80px rgba(77, 45, 70, 0.1);
+    --shadow-soft: 0 18px 42px rgba(77, 45, 70, 0.08);
+    --radius-xl: 36px;
     --radius-lg: 28px;
     --radius-md: 18px;
     --container: min(1120px, calc(100% - 2rem));
@@ -51,13 +54,15 @@ const {
 
   body {
     margin: 0;
-    font-family: "Manrope", sans-serif;
+    font-family: "Playfair Display", serif;
     color: var(--text);
     background:
-      radial-gradient(circle at top left, rgba(15, 118, 110, 0.16), transparent 30%),
-      radial-gradient(circle at bottom right, rgba(211, 162, 84, 0.18), transparent 28%),
+      radial-gradient(circle at top left, rgba(152, 98, 129, 0.18), transparent 28%),
+      radial-gradient(circle at 80% 18%, rgba(77, 45, 70, 0.1), transparent 24%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(246, 244, 244, 0.98)),
       var(--bg);
     line-height: 1.6;
+    min-width: 320px;
   }
 
   a {
@@ -70,6 +75,17 @@ const {
   h3,
   p {
     margin-top: 0;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-weight: 600;
+    letter-spacing: -0.03em;
+  }
+
+  p {
+    color: var(--muted);
   }
 
   .container {

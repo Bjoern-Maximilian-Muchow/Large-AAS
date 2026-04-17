@@ -3,193 +3,199 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 ---
 
-<BaseLayout
-  title="Fictional Company"
-  description="Responsive Astro starter website for a fictional company."
->
-  <Header />
+<BaseLayout>
+  <div id="top">
+    <Header />
 
-  <main id="top">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Responsive Astro Website Starter</p>
-          <h1>Build the company story later. Keep the structure solid now.</h1>
-          <p class="hero-text">
-            This Astro starter gives you a flexible homepage layout for a fictional
-            company with semantic sections and device-friendly behavior out of the box.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="#services">Explore Sections</a>
-            <a class="button secondary" href="#contact">Call to Action Area</a>
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">Lattis Seating Solutions</span>
+            <h1>Quiet luxury, designed for the way people gather.</h1>
+            <p>
+              Lattis creates refined seating environments with sculpted comfort,
+              understated detail, and a calm architectural presence.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="#collection">Explore Collection</a>
+              <a class="button button-secondary" href="#contact">Request Consultation</a>
+            </div>
+          </div>
+
+          <div class="hero-card">
+            <div class="hero-card-inner">
+              <span class="card-label">Signature Approach</span>
+              <h2>Tailored seating for elevated interiors.</h2>
+              <p>
+                From hospitality lounges to executive spaces, every piece is
+                shaped around proportion, material depth, and long-lasting ease.
+              </p>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div class="hero-panel" aria-label="Company highlights">
-          <article class="stat-card">
-            <span class="stat-value">01</span>
-            <p>Astro-based structure ready to rename and restyle.</p>
-          </article>
-          <article class="stat-card">
-            <span class="stat-value">02</span>
-            <p>Responsive behavior for phones, tablets, and laptops.</p>
-          </article>
-          <article class="stat-card">
-            <span class="stat-value">03</span>
-            <p>Reusable sections you can expand into a full company site.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+      <section class="section" id="collection">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Collection</span>
+            <h2>Three expressions of elegant comfort.</h2>
+          </div>
 
-    <section class="section" id="about">
-      <div class="container section-grid">
-        <div>
-          <p class="eyebrow">About</p>
-          <h2>A placeholder company profile with room to grow.</h2>
+          <div class="collection-grid">
+            <article class="panel">
+              <span class="panel-index">01</span>
+              <h3>Lounge</h3>
+              <p>
+                Deep silhouettes with soft contours for reception areas, suites,
+                and intimate waiting spaces.
+              </p>
+            </article>
+
+            <article class="panel">
+              <span class="panel-index">02</span>
+              <h3>Dining</h3>
+              <p>
+                Balanced support and graceful lines designed for long dinners,
+                conversation, and understated sophistication.
+              </p>
+            </article>
+
+            <article class="panel">
+              <span class="panel-index">03</span>
+              <h3>Executive</h3>
+              <p>
+                Structured forms with a quieter presence for boardrooms,
+                private offices, and premium shared environments.
+              </p>
+            </article>
+          </div>
         </div>
-        <div>
+      </section>
+
+      <section class="section section-split" id="craft">
+        <div class="container split-grid">
+          <div>
+            <span class="eyebrow">Craft</span>
+            <h2>Material restraint with a distinctive finish.</h2>
+          </div>
+
+          <div class="split-copy">
+            <p>
+              We combine clean geometry with tactile upholstery, fine stitching,
+              and a warm tonal palette to create seating that feels quietly
+              exceptional instead of overstated.
+            </p>
+            <p>
+              Every decision is reduced to what matters most: comfort,
+              proportion, and timeless atmosphere.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="process">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Process</span>
+            <h2>A clear path from concept to placement.</h2>
+          </div>
+
+          <div class="process-grid">
+            <article class="process-step">
+              <strong>01</strong>
+              <h3>Consult</h3>
+              <p>We define atmosphere, dimensions, and functional priorities.</p>
+            </article>
+
+            <article class="process-step">
+              <strong>02</strong>
+              <h3>Curate</h3>
+              <p>We align silhouettes, tones, and finishes with your interior vision.</p>
+            </article>
+
+            <article class="process-step">
+              <strong>03</strong>
+              <h3>Deliver</h3>
+              <p>We complete the setting with seating that feels measured and lasting.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container contact-card">
+          <span class="eyebrow">Contact</span>
+          <h2>Bring a calmer, more luxurious seating language into your space.</h2>
           <p>
-            Use this section for the company mission, background, or what makes the
-            business different. The content is intentionally generic so you can swap
-            in real copy later without changing the layout.
+            Begin with a conversation about your project, ambience, and seating needs.
           </p>
+          <a class="button button-primary" href="mailto:studio@lattis.com">studio@lattis.com</a>
         </div>
-      </div>
-    </section>
-
-    <section class="section alt" id="services">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Services</p>
-          <h2>Three reusable feature cards for core offerings.</h2>
-        </div>
-
-        <div class="card-grid">
-          <article class="info-card">
-            <h3>Service One</h3>
-            <p>Replace this with a key product, capability, or business area.</p>
-          </article>
-          <article class="info-card">
-            <h3>Service Two</h3>
-            <p>Keep descriptions short and focused so the section stays scannable.</p>
-          </article>
-          <article class="info-card">
-            <h3>Service Three</h3>
-            <p>Add more cards later if needed without changing the responsive pattern.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="process">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Process</p>
-          <h2>A simple flow that explains how the company works.</h2>
-        </div>
-
-        <div class="timeline">
-          <article class="timeline-item">
-            <span>Step 1</span>
-            <h3>Introduce the company</h3>
-            <p>Summarize the problem you solve or the market you serve.</p>
-          </article>
-          <article class="timeline-item">
-            <span>Step 2</span>
-            <h3>Show the offer</h3>
-            <p>Describe services, products, or engagement models in simple language.</p>
-          </article>
-          <article class="timeline-item">
-            <span>Step 3</span>
-            <h3>Invite action</h3>
-            <p>Add a form, booking link, or contact method when the company is defined.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section accent" id="contact">
-      <div class="container contact-panel">
-        <div>
-          <p class="eyebrow">Contact</p>
-          <h2>Ready for a real CTA when the company details are finalized.</h2>
-        </div>
-        <a class="button primary light" href="mailto:hello@example.com">hello@example.com</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-wrap">
-      <p>Fictional Company starter site</p>
-      <p>Built with Astro and prepared for Vercel deployment.</p>
-    </div>
-  </footer>
+      </section>
+    </main>
+  </div>
 </BaseLayout>
 
 <style>
-  .hero,
-  .section {
-    padding: 5rem 0;
+  main {
+    padding-bottom: 4rem;
   }
 
-  .hero-grid,
-  .section-grid,
-  .card-grid,
-  .timeline,
-  .contact-panel,
-  .footer-wrap {
-    display: grid;
-    gap: 1.5rem;
+  .hero {
+    padding: 5.5rem 0 3rem;
   }
 
   .hero-grid {
-    grid-template-columns: 1.25fr 1fr;
-    align-items: center;
-    min-height: calc(100svh - 5rem);
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+
+  .hero-copy,
+  .hero-card,
+  .panel,
+  .process-step,
+  .contact-card {
+    border: 1px solid var(--line);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.58));
+    box-shadow: var(--shadow-soft);
+  }
+
+  .hero-copy {
+    padding: clamp(2rem, 4vw, 4rem);
+    border-radius: var(--radius-xl);
+  }
+
+  .hero-copy h1 {
+    max-width: 11ch;
+    margin-bottom: 1rem;
+    font-size: clamp(3rem, 7vw, 5.8rem);
+    line-height: 0.94;
+  }
+
+  .hero-copy p {
+    max-width: 34rem;
+    margin-bottom: 0;
+    font-size: 1.08rem;
   }
 
   .eyebrow {
-    margin-bottom: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    font-size: 0.82rem;
-    font-weight: 700;
-    color: var(--accent);
-  }
-
-  h1 {
-    font-size: clamp(2.6rem, 7vw, 5rem);
-    line-height: 0.97;
-    max-width: 11ch;
+    display: inline-block;
     margin-bottom: 1.25rem;
-  }
-
-  h2 {
-    font-size: clamp(2rem, 4vw, 3.2rem);
-    line-height: 1.05;
-    margin-bottom: 0;
-  }
-
-  h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .hero-text,
-  .section p,
-  .info-card p,
-  .timeline-item p,
-  .stat-card p,
-  .site-footer p {
-    color: var(--muted);
+    color: var(--accent);
+    font-size: 0.78rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
   }
 
   .hero-actions {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 0.9rem;
     margin-top: 2rem;
   }
 
@@ -197,11 +203,16 @@ import Header from "../components/Header.astro";
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 3.25rem;
-    padding: 0.85rem 1.25rem;
+    min-height: 3.35rem;
+    padding: 0.85rem 1.4rem;
     border-radius: 999px;
-    font-weight: 700;
-    transition: transform 180ms ease, background-color 180ms ease;
+    font-size: 0.84rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    transition:
+      transform 180ms ease,
+      box-shadow 180ms ease,
+      background 180ms ease;
   }
 
   .button:hover,
@@ -209,147 +220,141 @@ import Header from "../components/Header.astro";
     transform: translateY(-1px);
   }
 
-  .button.primary {
-    color: #fff;
-    background: var(--text);
+  .button-primary {
+    background: linear-gradient(135deg, var(--text), var(--accent));
+    color: var(--bg);
+    box-shadow: 0 14px 28px rgba(77, 45, 70, 0.16);
   }
 
-  .button.primary.light {
-    background: #fff;
+  .button-secondary {
+    border: 1px solid var(--line);
     color: var(--text);
+    background: rgba(255, 255, 255, 0.44);
   }
 
-  .button.secondary {
-    background: var(--surface);
-    border: 1px solid var(--line);
-  }
-
-  .hero-panel,
-  .card-grid,
-  .timeline {
-    display: grid;
-    gap: 1rem;
-  }
-
-  .hero-panel {
+  .hero-card {
+    border-radius: var(--radius-xl);
     padding: 1rem;
-    border-radius: var(--radius-lg);
-    background: rgba(255, 253, 248, 0.75);
-    border: 1px solid rgba(21, 35, 31, 0.08);
-    box-shadow: var(--shadow);
   }
 
-  .stat-card,
-  .info-card,
-  .timeline-item {
-    padding: 1.5rem;
-    border-radius: var(--radius-md);
-    background: var(--surface-strong);
-    border: 1px solid var(--line);
+  .hero-card-inner {
+    height: 100%;
+    padding: 2rem;
+    border-radius: calc(var(--radius-xl) - 10px);
+    background:
+      linear-gradient(180deg, rgba(152, 98, 129, 0.12), rgba(77, 45, 70, 0.04)),
+      rgba(255, 255, 255, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 100%;
   }
 
-  .stat-value,
-  .timeline-item span {
-    display: inline-block;
-    margin-bottom: 0.8rem;
+  .card-label,
+  .panel-index {
     color: var(--accent);
-    font-weight: 800;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
+    font-size: 0.72rem;
   }
 
-  .section-grid {
-    grid-template-columns: 1fr 1fr;
+  .hero-card h2,
+  .section-heading h2,
+  .contact-card h2 {
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    line-height: 1;
+  }
+
+  .section {
+    padding: 1.5rem 0;
   }
 
   .section-heading {
-    max-width: 42rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 
-  .card-grid,
-  .timeline {
+  .collection-grid,
+  .process-grid {
+    display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
   }
 
-  .alt {
-    background: rgba(255, 255, 255, 0.42);
-  }
-
-  .accent {
-    padding-top: 0;
-  }
-
-  .contact-panel {
-    grid-template-columns: 1fr auto;
-    align-items: center;
-    padding: 2rem;
+  .panel,
+  .process-step {
+    padding: 1.6rem;
     border-radius: var(--radius-lg);
-    background: linear-gradient(135deg, #0f766e, #165e56);
-    color: #fff;
-    box-shadow: var(--shadow);
   }
 
-  .contact-panel .eyebrow,
-  .contact-panel p {
-    color: rgba(255, 255, 255, 0.78);
+  .panel h3,
+  .process-step h3 {
+    margin: 0.5rem 0 0.75rem;
+    font-size: 1.5rem;
   }
 
-  .site-footer {
-    padding: 0 0 2rem;
+  .section-split {
+    padding-top: 2.5rem;
   }
 
-  .footer-wrap {
-    grid-template-columns: 1fr auto;
-    padding-top: 1rem;
-    border-top: 1px solid rgba(21, 35, 31, 0.12);
+  .split-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  .split-copy {
+    padding: 1.8rem 0 0;
+  }
+
+  .process-step strong {
+    color: var(--accent);
+    font-size: 0.9rem;
+    letter-spacing: 0.2em;
+  }
+
+  .contact-card {
+    padding: clamp(2rem, 4vw, 3rem);
+    border-radius: var(--radius-xl);
+    text-align: center;
+  }
+
+  .contact-card p {
+    margin: 0 auto 1.75rem;
+    max-width: 36rem;
   }
 
   @media (max-width: 900px) {
     .hero-grid,
-    .section-grid,
-    .card-grid,
-    .timeline,
-    .contact-panel,
-    .footer-wrap {
+    .collection-grid,
+    .process-grid,
+    .split-grid {
       grid-template-columns: 1fr;
     }
 
+    .hero-copy h1 {
+      max-width: 12ch;
+    }
+  }
+
+  @media (max-width: 640px) {
     .hero {
-      padding-top: 3rem;
+      padding-top: 4rem;
     }
 
-    .hero-grid {
-      min-height: auto;
-    }
-  }
-
-  @media (max-width: 720px) {
-    .hero,
-    .section {
-      padding: 4rem 0;
-    }
-
-    h1 {
-      max-width: 100%;
-    }
-  }
-
-  @media (max-width: 480px) {
-    :global(:root) {
-      --container: min(1120px, calc(100% - 1.25rem));
-    }
-
-    .button {
-      width: 100%;
-    }
-
-    .hero-actions {
-      gap: 0.75rem;
-    }
-
-    .contact-panel {
+    .hero-copy,
+    .hero-card-inner,
+    .panel,
+    .process-step,
+    .contact-card {
       padding: 1.5rem;
+    }
+
+    .hero-copy h1,
+    .hero-card h2,
+    .section-heading h2,
+    .contact-card h2 {
+      line-height: 1.02;
     }
   }
 </style>
