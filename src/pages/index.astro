@@ -8,10 +8,36 @@ import Header from "../components/Header.astro";
     <Header />
 
     <main>
-      <section class="hero">
+      <section class="office-launch">
+        <div class="container office-grid">
+          <div class="office-copy">
+            <span class="eyebrow">Office Seating</span>
+            <h1>Lattice comfort, available now.</h1>
+            <p>
+              Our lattice-structure office chairs are already successfully sold,
+              combining ergonomic support, lightweight comfort, and a distinct
+              Lattis material language for modern workspaces.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="#contact">Buy Now</a>
+              <a class="button button-secondary" href="#airline">Airline Preorder Coming Soon</a>
+            </div>
+          </div>
+
+          <div class="office-placeholder-card">
+            <div class="office-placeholder-inner">
+              <span class="card-label">Office Chair Image</span>
+              <p>Placeholder for a product image of the office chair currently on sale.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="hero" id="airline">
         <div class="container hero-grid">
           <div class="hero-copy">
-            <span class="eyebrow">Lattis Seating Solutions</span>
+            <span class="eyebrow">Airline Seating</span>
             <h1>Light, breathable comfort.</h1>
             <p>
               Lightweight passenger seat cushions made from a single recyclable
@@ -162,6 +188,17 @@ import Header from "../components/Header.astro";
     padding-bottom: 4rem;
   }
 
+  .office-launch {
+    padding: 3rem 0 1.5rem;
+  }
+
+  .office-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+
   .hero {
     padding: 5.5rem 0 3rem;
   }
@@ -176,6 +213,8 @@ import Header from "../components/Header.astro";
     align-items: stretch;
   }
 
+  .office-copy,
+  .office-placeholder-card,
   .hero-copy,
   .hero-image-card,
   .hero-placeholder-card,
@@ -194,6 +233,10 @@ import Header from "../components/Header.astro";
       background 220ms ease;
   }
 
+  .office-copy:hover,
+  .office-copy:focus-within,
+  .office-placeholder-card:hover,
+  .office-placeholder-card:focus-within,
   .hero-copy:hover,
   .hero-copy:focus-within,
   .hero-card:hover,
@@ -214,6 +257,55 @@ import Header from "../components/Header.astro";
     grid-area: copy;
     padding: clamp(2rem, 4vw, 4rem);
     border-radius: var(--radius-xl);
+  }
+
+  .office-copy {
+    padding: clamp(2rem, 4vw, 3.5rem);
+    border-radius: var(--radius-xl);
+  }
+
+  .office-copy h1 {
+    max-width: 10ch;
+    margin-bottom: 1rem;
+    font-size: clamp(3rem, 6vw, 5.2rem);
+    line-height: 0.94;
+  }
+
+  .office-copy p {
+    max-width: 34rem;
+    margin-bottom: 0;
+    font-size: 1.08rem;
+  }
+
+  .office-placeholder-card {
+    border-radius: var(--radius-xl);
+    padding: 1rem;
+  }
+
+  .office-placeholder-inner {
+    height: 100%;
+    min-height: 420px;
+    border: 1px dashed rgba(152, 98, 129, 0.32);
+    border-radius: calc(var(--radius-xl) - 10px);
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(246, 244, 244, 0.74)),
+      repeating-linear-gradient(
+        45deg,
+        rgba(152, 98, 129, 0.04),
+        rgba(152, 98, 129, 0.04) 18px,
+        rgba(255, 255, 255, 0.18) 18px,
+        rgba(255, 255, 255, 0.18) 36px
+      );
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .office-placeholder-inner p {
+    max-width: 20rem;
+    margin: 0;
+    font-size: 1rem;
   }
 
   .hero-image-card {
@@ -428,6 +520,7 @@ import Header from "../components/Header.astro";
   }
 
   @media (max-width: 900px) {
+    .office-grid,
     .hero-grid,
     .collection-grid,
     .process-grid,
@@ -453,6 +546,8 @@ import Header from "../components/Header.astro";
       padding-top: 4rem;
     }
 
+    .office-copy,
+    .office-placeholder-inner,
     .hero-copy,
     .hero-card-inner,
     .hero-placeholder-inner,
