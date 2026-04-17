@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Responsive starter website for a fictional company."
+  >
+  <title>Fictional Company</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Homepage">
+        <span class="brand-mark">FC</span>
+        <span class="brand-text">
+          <strong>Fictional Company</strong>
+          <small>Name and brand TBD</small>
+        </span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        aria-label="Open navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Responsive Website Starter</p>
+          <h1>Build the company story later. Keep the structure solid now.</h1>
+          <p class="hero-text">
+            This starter site gives you a flexible homepage layout for a fictional
+            company with clean sections, semantic markup, and device-friendly behavior.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#services">Explore Sections</a>
+            <a class="button secondary" href="#contact">Call to Action Area</a>
+          </div>
+        </div>
+
+        <div class="hero-panel" aria-label="Company highlights">
+          <article class="stat-card">
+            <span class="stat-value">01</span>
+            <p>Neutral brand system ready to rename and restyle.</p>
+          </article>
+          <article class="stat-card">
+            <span class="stat-value">02</span>
+            <p>Responsive grid behavior for phones, tablets, and laptops.</p>
+          </article>
+          <article class="stat-card">
+            <span class="stat-value">03</span>
+            <p>Reusable content blocks for future company details.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container section-grid">
+        <div>
+          <p class="eyebrow">About</p>
+          <h2>A placeholder company profile with room to grow.</h2>
+        </div>
+        <div>
+          <p>
+            Use this section for the company mission, background, or what makes the
+            business different. The content is intentionally generic so you can swap
+            in real copy later without changing the layout.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Services</p>
+          <h2>Three reusable feature cards for core offerings.</h2>
+        </div>
+
+        <div class="card-grid">
+          <article class="info-card">
+            <h3>Service One</h3>
+            <p>
+              Replace this with a key product, capability, or business area.
+            </p>
+          </article>
+          <article class="info-card">
+            <h3>Service Two</h3>
+            <p>
+              Keep descriptions short and focused so the section stays scannable.
+            </p>
+          </article>
+          <article class="info-card">
+            <h3>Service Three</h3>
+            <p>
+              Add more cards later if needed without changing the responsive pattern.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Process</p>
+          <h2>A simple flow that explains how the company works.</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <span>Step 1</span>
+            <h3>Introduce the company</h3>
+            <p>Summarize the problem you solve or the market you serve.</p>
+          </article>
+          <article class="timeline-item">
+            <span>Step 2</span>
+            <h3>Show the offer</h3>
+            <p>Describe services, products, or engagement models in simple language.</p>
+          </article>
+          <article class="timeline-item">
+            <span>Step 3</span>
+            <h3>Invite action</h3>
+            <p>Add a form, booking link, or contact method when the company is defined.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section accent" id="contact">
+      <div class="container contact-panel">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Ready for a real CTA when the company details are finalized.</h2>
+        </div>
+        <a class="button primary light" href="mailto:hello@example.com">hello@example.com</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>Fictional Company starter site</p>
+      <p>Built as a responsive structure for future branding and content.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
