@@ -1,0 +1,238 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+---
+
+<BaseLayout
+  lang="de"
+  title="Impressum | Lattis"
+  description="Impressum und rechtliche Hinweise."
+>
+  <div id="top">
+    <Header homePath={`${import.meta.env.BASE_URL}`} />
+
+    <main class="legal-page">
+      <section class="legal-hero">
+        <div class="container legal-hero-card">
+          <span class="eyebrow">Rechtliches</span>
+          <h1>Impressum</h1>
+          <p>
+            Ansprechpartner, Pflichtangaben und rechtliche Hinweise im Look der
+            Lattis-Website.
+          </p>
+        </div>
+      </section>
+
+      <section class="legal-sections">
+        <div class="container legal-grid">
+          <article class="legal-card">
+            <span class="card-label">Impressum</span>
+            <h2>Pflichtangaben</h2>
+            <div class="legal-copy">
+              <p>Westwing GmbH</p>
+              <p>Moosacher Str. 88</p>
+              <p>80809 Muenchen</p>
+              <p>Deutschland</p>
+              <p>Telefon: +49 (89) 550 544 -0</p>
+              <p>Telefax: +49 (89) 550 544-444</p>
+              <p>E-Mail: impressum@westwing.de</p>
+              <p>Webseite: www.westwing.de</p>
+              <p>Geschaeftsfuehrer: Dr. Andreas Hoerning</p>
+              <p>Firmensitz: Muenchen</p>
+              <p>Rechtsform: GmbH</p>
+              <p>Registergericht: Amtsgericht Muenchen</p>
+              <p>Registernummer: HRB 191901</p>
+              <p>Umsatzsteueridentifikationsnummer: DE815289147</p>
+            </div>
+          </article>
+
+          <article class="legal-card">
+            <span class="card-label">Kontakt</span>
+            <h2>Kundenservice</h2>
+            <div class="legal-copy">
+              <p>Hotline Kundenservice (Mo-So von 6:00 bis 22:00 Uhr):</p>
+              <p>+49 (89) 41207272, fuer Oesterreich: +43 720 880729</p>
+              <p>Telefax: +49 (89) 550544-444</p>
+              <p>E-Mail: service@westwing.de</p>
+              <p>Kontaktformular</p>
+            </div>
+          </article>
+
+          <article class="legal-card legal-card-wide">
+            <span class="card-label">Hinweise</span>
+            <h2>Rechtliche Informationen</h2>
+            <div class="legal-copy">
+              <h3>Haftungshinweis</h3>
+              <p>
+                Die Informationen, die auf diesen Seiten abgerufen werden koennen,
+                erheben weder einen Anspruch auf Richtigkeit noch auf
+                Vollstaendigkeit. Die Benutzung erfolgt auf eigene Gefahr. Wir
+                weisen ausdruecklich darauf hin, dass wir fuer die Angebote
+                Dritter im World Wide Web (sog. "deep links") nicht
+                verantwortlich sind. Soweit Links auf die Angebote Dritter
+                verweisen, enthalten diese nach unserer Kenntnis keine strafbaren
+                oder anderweitig verbotenen Inhalte. Fuer diese Inhalte wird
+                keinerlei Haftung uebernommen.
+              </p>
+
+              <h3>Alternative Streitbeilegung</h3>
+              <p>
+                Die Westwing GmbH ist nicht bereit und nicht verpflichtet, an
+                Streitbeilegungsverfahren vor einer
+                Verbraucherschlichtungsstelle teilzunehmen.
+              </p>
+
+              <h3>Urheberrechtlicher Hinweis</h3>
+              <p>
+                Inhalt und Struktur der Internet-Seiten von westwing.de sind
+                urheberrechtlich geschuetzt. Jegliche Vervielfaeltigung von
+                Informationen oder Daten, insbesondere die Verwendung von Texten,
+                Textteilen, Bildmaterial oder sonstigen Inhalten bedarf der
+                vorherigen Zustimmung durch den Anbieter bzw. Rechteinhaber.
+              </p>
+
+              <h3>Schutzrechtsverletzung</h3>
+              <p>
+                Falls Sie vermuten, dass von dieser Website aus eines Ihrer
+                Schutzrechte verletzt wird, teilen Sie das bitte umgehend per
+                elektronischer Post mit, damit zuegig Abhilfe geschafft werden
+                kann.
+              </p>
+
+              <h3>Investor Relations</h3>
+              <p>
+                Alle Informationen zu Investor Relations finden Sie auf unserer
+                Website
+                <a href="https://ir.westwing.com/" target="_blank" rel="noreferrer">
+                  https://ir.westwing.com/
+                </a>
+              </p>
+
+              <p>Juli 2025</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <Footer />
+  </div>
+</BaseLayout>
+
+<style>
+  .legal-page {
+    padding-bottom: 4rem;
+  }
+
+  .legal-hero {
+    padding: 4rem 0 1.5rem;
+  }
+
+  .legal-hero-card,
+  .legal-card {
+    border: 1px solid var(--line);
+    border-radius: var(--radius-xl);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.58));
+    box-shadow: var(--shadow-soft);
+  }
+
+  .legal-hero-card {
+    padding: clamp(2rem, 4vw, 3.5rem);
+  }
+
+  .legal-hero-card h1 {
+    margin-bottom: 1rem;
+    font-size: clamp(3rem, 7vw, 5rem);
+    line-height: 0.94;
+  }
+
+  .legal-hero-card p {
+    max-width: 42rem;
+    margin-bottom: 0;
+    font-size: 1.05rem;
+  }
+
+  .legal-sections {
+    padding: 1.5rem 0 2rem;
+  }
+
+  .legal-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  .legal-card {
+    padding: clamp(1.75rem, 3vw, 2.4rem);
+  }
+
+  .legal-card-wide {
+    grid-column: 1 / -1;
+  }
+
+  .card-label {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: var(--accent);
+    font-size: 0.78rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  .eyebrow {
+    display: inline-block;
+    margin-bottom: 1.25rem;
+    color: var(--accent);
+    font-size: 0.78rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  .legal-card h2 {
+    margin-bottom: 1rem;
+    font-size: clamp(1.9rem, 4vw, 2.8rem);
+    line-height: 1;
+  }
+
+  .legal-copy {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .legal-copy h3 {
+    margin: 1rem 0 0;
+    font-size: 1.2rem;
+  }
+
+  .legal-copy p {
+    margin-bottom: 0;
+  }
+
+  .legal-copy a {
+    text-decoration: underline;
+    text-underline-offset: 0.14em;
+  }
+
+  @media (max-width: 900px) {
+    .legal-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .legal-card-wide {
+      grid-column: auto;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .legal-hero {
+      padding-top: 3rem;
+    }
+
+    .legal-card,
+    .legal-hero-card {
+      padding: 1.5rem;
+    }
+  }
+</style>

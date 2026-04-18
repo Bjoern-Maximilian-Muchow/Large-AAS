@@ -1,6 +1,10 @@
+---
+const { homePath = `${import.meta.env.BASE_URL}` } = Astro.props;
+---
+
 <header class="site-header">
   <div class="container nav-wrap">
-    <a class="brand" href="#top" aria-label="Homepage">
+    <a class="brand" href={`${homePath}#top`} aria-label="Homepage">
       <img class="brand-mark" src={`${import.meta.env.BASE_URL}branding/lattis-logo.png`} alt="Lattis logo" />
       <span class="brand-text">
         <strong>Lattis</strong>
@@ -16,10 +20,10 @@
     </label>
 
     <nav class="site-nav" aria-label="Primary navigation">
-      <a href="#collection">Collection</a>
-      <a href="#craft">Craft</a>
-      <a href="#process">Process</a>
-      <a href="#contact">Contact</a>
+      <a href={`${homePath}#collection`}>Collection</a>
+      <a href={`${homePath}#craft`}>Craft</a>
+      <a href={`${homePath}#process`}>Process</a>
+      <a href={`${homePath}#contact`}>Contact</a>
     </nav>
   </div>
 </header>
