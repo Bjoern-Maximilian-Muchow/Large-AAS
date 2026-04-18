@@ -1,0 +1,104 @@
+<footer class="site-footer" id="impressum">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img
+        class="footer-logo"
+        src={`${import.meta.env.BASE_URL}branding/lattis-logo.png`}
+        alt="Lattis logo"
+      />
+      <div>
+        <strong>Lattis</strong>
+        <p>Seating concepts for lighter cabins, better comfort, and cleaner material cycles.</p>
+      </div>
+    </div>
+
+    <div class="footer-column">
+      <span class="footer-label">Navigation</span>
+      <a href="#top">Top</a>
+      <a href="#collection">Benefits</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="footer-column">
+      <span class="footer-label">Impressum</span>
+      <p>Lattis</p>
+      <p>Lattis</p>
+      <p>[Straße und Hausnummer]</p>
+      <p>[PLZ Ort]</p>
+      <a href="mailto:studio@lattis.com">studio@lattis.com</a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    padding: 2rem 0 3rem;
+    border-top: 1px solid var(--line);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.62));
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(180px, 0.8fr));
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  .footer-brand,
+  .footer-column {
+    padding: 1.5rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    background: rgba(255, 255, 255, 0.56);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .footer-brand {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .footer-logo {
+    width: 4rem;
+    height: auto;
+    flex-shrink: 0;
+    object-fit: contain;
+  }
+
+  .footer-brand strong,
+  .footer-label {
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+
+  .footer-label {
+    color: var(--accent);
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .footer-brand p,
+  .footer-column p,
+  .footer-column a {
+    margin: 0;
+    color: var(--muted);
+  }
+
+  .footer-column {
+    display: grid;
+    gap: 0.65rem;
+  }
+
+  .footer-column a:hover,
+  .footer-column a:focus-visible {
+    color: var(--text);
+  }
+
+  @media (max-width: 900px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
