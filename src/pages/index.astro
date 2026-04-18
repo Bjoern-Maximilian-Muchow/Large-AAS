@@ -26,7 +26,7 @@ import Header from "../components/Header.astro";
 
           <figure class="office-image-card">
             <img
-              src={`${import.meta.env.BASE_URL}schreibtischstuhl.jpeg`}
+              src={`${import.meta.env.BASE_URL}images/schreibtischstuhl.jpeg`}
               alt="Lattis office chair with lattice structure"
             />
           </figure>
@@ -52,17 +52,17 @@ import Header from "../components/Header.astro";
 
           <figure class="hero-image-card">
             <img
-              src={`${import.meta.env.BASE_URL}konzept01.jpeg`}
+              src={`${import.meta.env.BASE_URL}images/konzept01.jpeg`}
               alt="Concept rendering of the Lattis seating cushion"
             />
           </figure>
 
-          <div class="hero-placeholder-card">
-            <div class="hero-placeholder-inner">
-              <span class="card-label">Coming Soon</span>
-              <p>Image placeholder for a future product or cockpit visual.</p>
-            </div>
-          </div>
+          <figure class="hero-placeholder-card">
+            <img
+              src={`${import.meta.env.BASE_URL}images/dreierreihe.png`}
+              alt="Three-seat airline row featuring the Lattis seating concept"
+            />
+          </figure>
 
           <div class="hero-card hero-card-compact">
             <div class="hero-card-inner">
@@ -310,33 +310,17 @@ import Header from "../components/Header.astro";
   .hero-placeholder-card {
     grid-area: placeholder;
     border-radius: var(--radius-xl);
-    padding: 1rem;
+    margin: 0;
+    overflow: hidden;
+    min-height: 320px;
   }
 
-  .hero-placeholder-inner {
+  .hero-placeholder-card img {
+    display: block;
+    width: 100%;
     height: 100%;
     min-height: 320px;
-    border: 1px dashed rgba(152, 98, 129, 0.32);
-    border-radius: calc(var(--radius-xl) - 10px);
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(246, 244, 244, 0.74)),
-      repeating-linear-gradient(
-        -45deg,
-        rgba(152, 98, 129, 0.04),
-        rgba(152, 98, 129, 0.04) 16px,
-        rgba(255, 255, 255, 0.16) 16px,
-        rgba(255, 255, 255, 0.16) 32px
-      );
-    display: grid;
-    place-items: center;
-    text-align: center;
-    padding: 2rem;
-  }
-
-  .hero-placeholder-inner p {
-    max-width: 20rem;
-    margin: 0;
-    font-size: 1rem;
+    object-fit: cover;
   }
 
   .hero-copy h1 {
@@ -533,7 +517,6 @@ import Header from "../components/Header.astro";
     .office-image-card,
     .hero-copy,
     .hero-card-inner,
-    .hero-placeholder-inner,
     .panel,
     .process-step,
     .contact-card {
